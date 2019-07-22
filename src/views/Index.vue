@@ -1,55 +1,56 @@
 <template>
-  <div>
-    <van-nav-bar
-      :title="title"
-      :fixed="true"
-    />
-    <h2>欢迎：{{this.$store.state.name}}</h2>
-    <div id="inner">
-      <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
-        <router-view @toparent="getval"></router-view>
-      </van-pull-refresh>
-
-    </div>
-
-
-    <van-tabbar v-model="active" class="foot">
-      <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
-      <van-tabbar-item icon="search" to="/search">搜索</van-tabbar-item>
-      <van-tabbar-item icon="friends-o" to="/friend">朋友</van-tabbar-item>
-      <van-tabbar-item icon="setting-o" to="/setting">设置</van-tabbar-item>
-    </van-tabbar>
-  </div>
+	<div>
+		<van-nav-bar title="宠"  @click-right="onClickRight" :fixed="true">
+	  		<van-icon name="search" slot="right"/>
+		</van-nav-bar>
+		<div id="comm" style="margin-top: 46px;margin-bottom: 50px;">
+			<v-banner></v-banner>
+			<v-nav></v-nav>
+			<v-zsj></v-zsj>
+			<v-recdog></v-recdog>
+			<v-reccat></v-reccat>
+			<v-mk></v-mk>
+		</div>
+			<van-tabbar v-model="active">
+			  <van-tabbar-item icon="wap-home" to="/index">首页</van-tabbar-item>
+			  <van-tabbar-item icon="shop-o" to="/cmt">社区</van-tabbar-item>
+			  <van-tabbar-item icon="cash-back-record" to="/buy">购宠</van-tabbar-item>
+			  <van-tabbar-item icon="chat-o" to="/new">消息</van-tabbar-item>
+			  <van-tabbar-item icon="friends-o" to="/my">我的</van-tabbar-item>
+			</van-tabbar>
+	</div>
 </template>
-
-<script type="text/javascript">
-import { Toast } from 'vant';
-export default {
-  name: 'Index',
-  data(){
-    return {
-      active:'',
-      title:"首页",
-      isLoading: false
-    }
-  },
-  methods: {
-    getval(msg){
-      this.title=msg
-    },
-    onRefresh() {
-      setTimeout(() => {
-        this.$toast('刷新成功');
-        this.isLoading = false;
-      }, 1000);
-    }
-  }
-
-}
+	
+<script>
+	import RecLb from './RecLb';
+	import RecSy from './Recsy';
+	import RecZsj from './Reczsj';
+	import RecDog from './Recdog';
+	import RecCat from './Reccat';
+	import RecMk from './Recmk';
+	export default{
+		name:'Index',
+		data(){
+			return{
+				active:0
+			}
+		},
+		components:{
+			'v-banner':RecLb,
+			'v-nav':RecSy,
+			'v-zsj':RecZsj,
+			'v-recdog':RecDog,
+			'v-reccat':RecCat,
+			'v-mk':RecMk
+		},
+		methods:{
+			onClickRight(){
+				this.$router.push('/search');
+			}
+		}
+	}
 </script>
 
-<style scoped>
-#inner{
-  margin-bottom: 50px;
-}
+<style scoped="">
+	
 </style>
