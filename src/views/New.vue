@@ -1,4 +1,18 @@
 <template>
+<<<<<<< HEAD
+	<div>
+		<h2>New</h2>
+	</div>
+</template>
+
+<script>
+	export default{
+		name:'New'
+	}
+</script>
+
+<style>
+=======
   <div>
     <van-nav-bar
       title="消息"
@@ -131,4 +145,5 @@ export default {
     background: rgb(245, 245,245);
     vertical-align: middle;
 }
+>>>>>>> bfb5a5a808fdfab217de2f3562018cdea1dd6199
 </style>

@@ -1,4 +1,18 @@
 <template>
+<<<<<<< HEAD
+	<div>
+		<h2>cmt</h2>
+	</div>
+</template>
+
+<script>
+	export default{
+		name:'Cmt'
+	}
+</script>
+
+<style>
+=======
   <div>
     <div id="topnav">
       <van-tabbar v-model="top"  class="top" router="true"> 
@@ -54,4 +68,5 @@ export default {
     content: "\F0C0";
     margin-top: 15px;
 }
+>>>>>>> bfb5a5a808fdfab217de2f3562018cdea1dd6199
 </style>

@@ -1,4 +1,19 @@
 <template>
+<<<<<<< HEAD
+	<div>
+		<h2>Buy</h2>
+	</div>
+</template>
+
+<script>
+	export default{
+		name:'Buy'
+	}
+</script>
+
+<style>
+</style>
+=======
     <div> 
        <van-nav-bar id="zuche" title="萌宠      宠舍"  left-text="返回" left-arrow   @click-left="onClickLeft" :fixed="true"/>
 
@@ -157,3 +172,4 @@ img{
   max-width: 100%
 }
 </style>
+>>>>>>> bfb5a5a808fdfab217de2f3562018cdea1dd6199

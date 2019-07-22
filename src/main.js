@@ -5,10 +5,11 @@ import App from './App'
 import router from './router'
 import Vant from 'vant';
 import 'vant/lib/index.css';
+import VueLazyLoad from 'vue-lazyload'
 
 Vue.config.productionTip = false
 Vue.use(Vant);
-
+Vue.use(VueLazyLoad);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
