@@ -52,14 +52,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
     #box{
         width:375px;
-        height:117px;
+        height:109px;
         background:url(../assets/caodi.jpg) no-repeat;
         background-size: 375px 159px;
         opacity:1;
-        padding-top:42px;
+        padding-top:50px;
     }
     #box .logo{
         width:67px;

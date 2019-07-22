@@ -9,14 +9,16 @@
         :fixed='true'
         :border='false'
         />
-        <van-address-list
-        v-model="chosenAddressId"
-        :list="list"
-        :disabled-list="disabledList"
-        disabled-text="以下地址超出配送范围"
-        @add="onAdd"
-        @edit="onEdit"
-        />
+        <div id="inner">
+            <van-address-list
+            v-model="chosenAddressId"
+            :list="list"
+            :disabled-list="disabledList"
+            disabled-text="以下地址超出配送范围"
+            @add="onAdd"
+            @edit="onEdit"
+            />
+        </div>
     </div>
 
 </template>
@@ -69,6 +71,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped="">
+    #inner{
+        margin-top: 40px;
+    }
 </style>

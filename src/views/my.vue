@@ -9,13 +9,13 @@
         :fixed='true'
         :border='false'
         />
-        <div id="bt"></div>
+         <div id="bt"></div>
         <div id="tx">
             <div class='tp'></div>
             <div class='ming'><span>{{item}}</span></div>
-            <div class='jian'><van-icon name="arrow" @click="vi"/></div>
-            
+            <div class='jian'><van-icon name="arrow" @click="vi"/></div> 
         </div>
+        
         <div id="nr">
             <ul>
                 <li @click="sz">设置</li>
@@ -23,13 +23,15 @@
                 <li @click="gy">关于</li>
             </ul>
         </div>
-        <van-tabbar v-model="footer">
-        <van-tabbar-item icon="home-o" >首页</van-tabbar-item>
-        <van-tabbar-item icon="search" to="/cmt">社区</van-tabbar-item>
-        <van-tabbar-item icon="shopping-cart-o">宠购</van-tabbar-item>
-        <van-tabbar-item icon="comment-o" to="/new">消息</van-tabbar-item>
-        <van-tabbar-item icon="setting-o" to="/my">我的</van-tabbar-item>
-      </van-tabbar>
+        <div id="footer">
+            <van-tabbar v-model="footer">
+            <van-tabbar-item icon="home-o" to="/index">首页</van-tabbar-item>
+            <van-tabbar-item icon="search" to="/cmt">社区</van-tabbar-item>
+            <van-tabbar-item icon="shopping-cart-o" to="/Buy">宠购</van-tabbar-item>
+            <van-tabbar-item icon="comment-o" to="/new">消息</van-tabbar-item>
+            <van-tabbar-item icon="setting-o" to="/my">我的</van-tabbar-item>
+            </van-tabbar>
+        </div>
     </div>
 </template>
 
@@ -64,23 +66,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
     #my{
         position: relative;
+        height:100%;
     }
     #bt{
-        width:100vw;
-        height:90vh;
+        width:100%;
+        height:95vh;
         background:url(../assets/maogou.png) no-repeat;
-        background-size: 100vw 95vh;
+        background-size: 100% 100%;
         opacity:0.3;
     }
     #tx{
-        width:375px;
+        width:100%;
         height:95px;
         position: relative;
         position: absolute;
-        top:0;
+        top:30px;
     }
     #tx .tp{
         width:40px;
@@ -103,13 +106,12 @@ export default {
         top:40px;
     }
     #nr{
-      width:375px;
-      height:240px;
+      width:100%;
       position: absolute;
-      top:110px;  
+    top:110px;  
     }
     #nr li{
-        width:365px;
+        width:100%;
         height:38px;
         margin-left: 10px;
         text-align: left;

@@ -56,9 +56,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
     div h2{
         margin-left:-225px;
+        margin-top:50px;
     }
     div h4{
         margin-left:-236px;

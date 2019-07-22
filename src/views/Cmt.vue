@@ -14,11 +14,11 @@
         <router-view @toparent="getval"></router-view>
       
       <van-tabbar v-model="footer">
-        <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+        <van-tabbar-item icon="home-o" to="/index">首页</van-tabbar-item>
         <van-tabbar-item icon="search" to="/cmt">社区</van-tabbar-item>
-        <van-tabbar-item icon="shopping-cart-o">宠购</van-tabbar-item>
+        <van-tabbar-item icon="shopping-cart-o" to="/Buy">宠购</van-tabbar-item>
         <van-tabbar-item icon="comment-o" to="/new">消息</van-tabbar-item>
-        <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
+        <van-tabbar-item icon="setting-o" to="/my">我的</van-tabbar-item>
       </van-tabbar>
   </div>
 </template>

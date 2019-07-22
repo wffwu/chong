@@ -98,7 +98,7 @@ export default new Router({
     {
       path:'/',
 
-      redirect:'/Buy'
+      redirect:'/index'
     },
     {
       path:'/buy',
@@ -140,6 +140,7 @@ export default new Router({
     },
    
     {
+      path:'/configuration',
       redirect:"/Cmt"
     },
     {

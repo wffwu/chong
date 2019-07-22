@@ -21,7 +21,9 @@
             </van-tabs>
             
         </div>
-        <van-button type="info" size="large">退出登录</van-button>
+        <div id="tc">
+            <van-button type="info" size="large">退出登录</van-button>
+        </div>
     </div>
 </template>
 
@@ -43,17 +45,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
     #mn{
         position: relative;
     }
     #gr{
-       width:375px; 
+       width:100%; 
        height:200px;
        background: url(../assets/yuzhou.jpg) no-repeat;
-       background-size: 375px 200px;
+       background-size: 100% 200px;
        opacity:0.5;
        border-radius: 0 0 33% 33%;
+       margin-top:59px;
     }
     #grs{
         width:96px; 
@@ -61,23 +64,26 @@ export default {
         border-radius:50%;
         overflow:hidden;
         position: absolute;
-        left:142px;
-        top:52px;
+        left:39%;
+        top:10%;
     }
     #grs img{
-        width:96px; 
-        height:96px;
+        width:100%; 
+        height:100%;
     }
     #nr1{
-        width:375px; 
+        width:100%; 
         height:134px;
         background:#e5e5e5;
-        padding-top:180px;
+        padding-top:60%;
     }
     #nr2{
-        width:375px; 
+        width:100%; 
         height:134px;
         background:#e5e5e5;
-        padding-top:180px; 
+        padding-top:60%; 
+    }
+    #tc{
+        margin-bottom: 0;
     }
 </style>

@@ -79,7 +79,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
     #inner{
         margin-top:50px;
     }

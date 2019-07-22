@@ -1,7 +1,7 @@
 <template>
     <div id="mc">
         <van-nav-bar
-        title="宠自白"
+        title="在线客服"
         left-text="返回"
         left-arrow
         
@@ -47,12 +47,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
     #mc{
         position: relative;
     }
     #neir{
-        width: 375px;
+        width: 100%;
         height: 560px;
         background:#e5e5e5;
         margin-top:40px;

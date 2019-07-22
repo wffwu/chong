@@ -38,9 +38,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
     #mg{
-        width:375px;
+        width:100%;
         height:234px;
         background:#e5e5e5;
     }
